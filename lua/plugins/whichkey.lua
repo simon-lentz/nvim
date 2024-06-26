@@ -7,7 +7,12 @@ return {
 
       -- Keybindings used with stevearc/oil.nvim (oil.lua) plugin.
       require('which-key').register({
-        ['<leader>od'] = { '<cmd>Oil<cr>', 'Open directory list.' },
+        ['<leader>otb'] = { '<cmd>Oil<cr>', 'Open directory tree as editable buffer.' },
+      })
+
+      -- Keybindings used with nvim-tree/nvim-tree.lua (filetree.lua) plugin.
+      require('which-key').register({
+        ['<leader>ot'] = { '<cmd>NvimTreeOpen<cr>', 'Open directory tree.' },
       })
 
       -- Keybindings used with voldikss/vim-floaterm (term.lua) plugin.

@@ -11,6 +11,6 @@ return {
         })
 
         -- Create keybindings for plugin.
-        vim.keymap.set('n', '<leader>od', '<cmd>Oil<cr>', { desc = 'Open directory list.' })
+        vim.keymap.set('n', '<leader>otb', '<cmd>Oil<cr>', { desc = 'Open directory tree as editable buffer.' })
     end,
 }
