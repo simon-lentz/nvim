@@ -1,8 +1,9 @@
 return {
+    -- https://github.com/nvim-tree/nvim-tree.lua
     'nvim-tree/nvim-tree.lua',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     config = function()
-        -- Setup plugin.
+        -- Setup for plugin.
         require('nvim-tree').setup()
     
         -- Create keybindings for plugin.
