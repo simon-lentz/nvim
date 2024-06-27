@@ -2,14 +2,14 @@ local options = function()
     -- Disable netrw for use of nvim-tree plugin.
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
-    
+
     -- Set <space> as the leader key.
     vim.g.mapleader = ' '
     vim.g.maplocalleader = ' '
-    
+
     -- Enable 24-bit colour
     vim.opt.termguicolors = true
-    
+
     -- Enable nerd font support.
     vim.g.have_nerd_font = true
 
