@@ -1,5 +1,5 @@
 return {
-     "goolord/alpha-nvim",
+     'goolord/alpha-nvim',
      config = function ()
          local alpha = require('alpha')
          local dashboard = require('alpha.themes.dashboard')
@@ -12,8 +12,8 @@ return {
              [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
          }
          dashboard.section.buttons.val = {
-             dashboard.button( "e", "  New file" , ":ene <BAR> startinsert <CR>"),
-             dashboard.button( "q", "󰅚  Quit NVIM" , ":qa<CR>"),
+             dashboard.button( 'e', '  New file' , ':ene <BAR> startinsert <CR>'),
+             dashboard.button( 'q', '󰅚  Quit NVIM' , ':qa<CR>'),
          }
 
          dashboard.config.opts.noautocmd = true
