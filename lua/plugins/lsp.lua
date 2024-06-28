@@ -1,6 +1,6 @@
 return {
 	'neovim/nvim-lspconfig',
-	depenencies = { 'hrsh7th/nvim-cmp' },
+	dependencies = { 'hrsh7th/nvim-cmp' },
 	lazy = false,
 	config = function()
 	  local lspconfig = require('lspconfig')
