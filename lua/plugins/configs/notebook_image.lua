@@ -1,3 +1,4 @@
+--[[ 
 return {
   "3rd/image.nvim",
   config = function()
@@ -13,3 +14,5 @@ return {
       })
     end,
 }
+]]--
+return {}

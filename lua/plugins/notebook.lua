@@ -1,5 +1,6 @@
+--[[
 return {
-  {
+{
     "benlubas/molten-nvim",
     dependencies = {
       require('plugins.configs.notebook_image'),
@@ -32,3 +33,5 @@ return {
       end,
   },
 }
+]]--
+return {}
