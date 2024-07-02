@@ -1,7 +1,7 @@
 print('config tracks git@github.com:simon-lentz/nvim.git')
 
 -- Set python3 to dedicated venv host
-vim.g.python3_host_prog=vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
+vim.g.python3_host_prog = vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
 
 -- Set options.
 require('options')
@@ -11,8 +11,8 @@ require('options')
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 
 if not vim.loop.fs_stat(lazypath) then
-  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-  vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+	local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+	vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end
 
 vim.opt.rtp:prepend(lazypath)

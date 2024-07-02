@@ -1,11 +1,29 @@
 local M = {}
 
 M.lua = {
-  Lua = {
-    diagnostics = {
-      globals = { 'vim' }
-    }
-  }
+	Lua = {
+		completion = {
+			callSnippet = "Both",
+			keywordSnippet = "Both",
+		},
+		diagnostics = {
+			globals = { 'vim' }
+		},
+		format = {
+			enable = true
+		},
+		hint = {
+			enable = true
+		},
+	}
+}
+
+M.python = {
+	Python = {}
+}
+
+M.go = {
+	Go = {}
 }
 
 return M
