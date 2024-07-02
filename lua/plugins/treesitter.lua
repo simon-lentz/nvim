@@ -10,7 +10,7 @@ return {
           -- Add languages for always available syntax highlighting
           ensure_installed = {
             'bash',
-            'css',
+	    'css',
             'csv',
             'cue',
             'dockerfile',
@@ -21,15 +21,16 @@ return {
             'luadoc',
             'make',
             'markdown',
+	    'markdown_inline',
+	    'python',
             'toml',
             'vim',
             'vimdoc',
             'xml',
             'yaml',
           },
-          sync_install = false,
           highlight = { enable = true },
-          indent = { enable = true },  
+          indent = { enable = true },
         })
     end,
 }
