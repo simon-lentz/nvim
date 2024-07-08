@@ -1,5 +1,3 @@
-local data = assert(vim.fn.stdpath 'data') --[[@as string]]
-
 local set = vim.keymap.set
 
 -- Keybinds to make split navigation easier.
@@ -18,4 +16,5 @@ set('n', '<C-d>', '<C-W>-', { desc = 'Expand split down' })
 set('n', ']d', vim.diagnostic.goto_next, { desc = 'Move to next diagnostic message' })
 set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Move to previous diagnostic message' })
 
-require('which-key').setup()
+-- Keybinds for nvim file tree.
+set('n', '<leader>nt', '<cmd>NvimTreeOpen<cr>', { desc = 'Open directory tree.' })

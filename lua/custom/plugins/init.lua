@@ -17,14 +17,6 @@ return {
 	end,
 },
 {
-	-- https://github.com/windwp/nvim-autopairs
-	'windwp/nvim-autopairs',
-	event = 'InsertEnter',
-	config = true
-	-- use opts = {} for passing setup options
-	-- this is equivalent to setup({}) function
-},
-{
 	-- https://github.com/nvim-lualine/lualine.nvim
 	'nvim-lualine/lualine.nvim',
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -37,12 +29,15 @@ return {
 	'nvim-tree/nvim-tree.lua',
 	dependencies = { 'nvim-tree/nvim-web-devicons' },
 	config = function()
-		-- Setup for plugin.
 		require('nvim-tree').setup()
-
-		-- Create keybindings for plugin.
-		vim.keymap.set('n', '<leader>nt', '<cmd>NvimTreeOpen<cr>', { desc = 'Open directory tree.' })
+	end,
+},
+{
+	-- https://github.com/folke/which-key.nvim
+	'folke/which-key.nvim',
+	event = 'VimEnter',
+	config = function()
+	  require('which-key').setup()
 	end,
 },
 }
-
