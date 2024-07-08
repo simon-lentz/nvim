@@ -1,11 +1,21 @@
 local data = assert(vim.fn.stdpath 'data') --[[@as string]]
 
+local set = vim.keymap.set
+
 -- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Keybinds to resize splits
+set('n', '<C-,>', '<C-w>5<', { desc = 'Expand split left' })
+set('n', '<C-.>', '<C-w>5>', { desc = 'Expand split right' })
+set('n', '<C-u>', '<C-W>+', { desc = 'Expand split up' })
+set('n', '<C-d>', '<C-W>-', { desc = 'Expand split down' })
+
+-- Keybinds for diagnostics navigation
+set('n', ']d', vim.diagnostic.goto_next, { desc = 'Move to next diagnostic message' })
+set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Move to previous diagnostic message' })
 
 require('which-key').setup()
