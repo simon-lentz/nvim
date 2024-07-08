@@ -44,13 +44,5 @@ return {
 		vim.keymap.set('n', '<leader>nt', '<cmd>NvimTreeOpen<cr>', { desc = 'Open directory tree.' })
 	end,
 },
-{
-	-- https://github.com/folke/which-key.nvim
-	'folke/which-key.nvim',
-	event = 'VimEnter',
-	config = function()
-		-- Set up plugin.
-		require('which-key').setup()
-	end,
-},
 }
+
