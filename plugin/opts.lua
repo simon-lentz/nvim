@@ -4,13 +4,13 @@ local opt = vim.opt
 opt.termguicolors = true
 
 -- Preview changes live
-opt.inccommand = 'split'
+opt.inccommand = "split"
 
 -- Make line numbers default.
 opt.number = true
 
 -- Sync clipboard between OS and Neovim.
-opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"
 
 -- Enable break indent.
 opt.breakindent = true
@@ -20,7 +20,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Keep signcolumn on by default.
-opt.signcolumn = 'yes'
+opt.signcolumn = "yes"
 
 -- Decrease update time.
 opt.updatetime = 250
@@ -38,3 +38,6 @@ opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 opt.scrolloff = 10
+
+-- Set highlight on search, but clear on pressing <Esc> in normal mode
+opt.hlsearch = true
