@@ -1,7 +1,7 @@
 print('config tracks git@github.com:simon-lentz/nvim.git')
 
 -- Set python3 to dedicated venv host
-vim.g.python3_host_prog = vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
+vim.g.python3_host_prog = vim.fn.expand("~/dotfiles/.local/python/virtualenvs/neovim/bin/python3")
 
 -- Set options.
 require('options')
