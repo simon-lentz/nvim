@@ -5,9 +5,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local map = function(keys, func, desc)
 			vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 		end
-		map("gd", require("telescope.builtin").lsp_definitions, "Go to definition")
-		map("gr", require("telescope.builtin").lsp_references, "Go to references")
-		map("gi", require("telescope.builtin").lsp_implementations, "Go to implementation")
+		map("<leader>gd", require("telescope.builtin").lsp_definitions, "Go to definition")
+		map("<leader>gr", require("telescope.builtin").lsp_references, "Go to references")
+		map("<leader>gi", require("telescope.builtin").lsp_implementations, "Go to implementation")
 		map("<leader>gt", require("telescope.builtin").lsp_type_definitions, "Type definition")
 		map("<leader>rn", vim.lsp.buf.rename, "Rename")
 		map("K", vim.lsp.buf.hover, "Hover Documentation")
@@ -53,7 +53,7 @@ local servers = {
 					callSnippet = "Replace",
 				},
 				diagnostics = {
-					globals = { "vim", "data" },
+					global = { "vim", "data" },
 				},
 			},
 		},
@@ -64,8 +64,13 @@ require("mason").setup()
 
 local ensure_installed = vim.tbl_keys(servers or {})
 vim.list_extend(ensure_installed, {
-	"stylua", -- Used to format Lua code
+	"stylua", -- Lua formatting
+	"lua_ls", -- Lua LSP
+	"mypy", -- Python linting
+	"pyright", -- Python LSP
+	"flake8", -- Python formatting
 })
+
 require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 require("mason-lspconfig").setup({

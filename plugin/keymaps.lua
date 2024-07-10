@@ -17,7 +17,12 @@ set("n", "]d", vim.diagnostic.goto_next, { desc = "Move to next diagnostic messa
 set("n", "[d", vim.diagnostic.goto_prev, { desc = "Move to previous diagnostic message" })
 
 -- Keybinds for nvim file tree.
-set("n", "<leader>nt", "<cmd>NvimTreeOpen<cr>", { desc = "Open directory tree." })
+set("n", "<leader>dt", "<cmd>NvimTreeOpen<cr>", { desc = "Open directory tree." })
 
 -- Keybind for cancel highlight.
 set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
+-- Keybinds for floaterm
+set("n", "<leader>tb", "<cmd>FloatermNew<cr>", { desc = "Open terminal buffer" })
+set("n", "<esc><esc>", "<cmd>FloatermToggle><cr>", { desc = "Toggle terminal buffer in normal mode" })
+set("t", "<esc><esc>", "<cmd>FloatermToggle<cr>", { desc = "Toggle terminal buffer in terminal mode" })
