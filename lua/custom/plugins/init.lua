@@ -14,13 +14,13 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup()
-			vim.cmd.colorscheme("catppuccin")
+			vim.cmd.colorscheme("catppuccin-macchiato")
 		end,
 	},
 	{
 		-- https://github.com/nvim-lualine/lualine.nvim
 		"nvim-lualine/lualine.nvim",
-		dependencies = { require("custom.icons") },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({})
 		end,
@@ -28,7 +28,7 @@ return {
 	{
 		-- https://github.com/nvim-tree/nvim-tree.lua
 		"nvim-tree/nvim-tree.lua",
-		dependencies = { require("custom.icons") },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("nvim-tree").setup()
 		end,
@@ -41,19 +41,24 @@ return {
 			require("which-key").setup()
 		end,
 	},
-	--[[
--- Indent blankline needs to be configured so that the blocks are not so ugly.
--- vim-floaterm needs to be fixed.
---
---]]
-	--	{ -- https://github.com/lukas-reineke/indent-blankline.nvim
-	--		"lukas-reineke/indent-blankline.nvim",
-	--		main = "ibl",
-	--		config = function()
-	--			require("ibl").setup()
-	--		end,
-	--	},
 	{ -- https://github.com/voldikss/vim-floaterm
 		"voldikss/vim-floaterm",
+	},
+	{ -- https://github.com/echasnovski/mini.icons
+		"echasnovski/mini.icons",
+		--		opts = {},
+		--		lazy = true,
+		--		specs = {
+		--			{ "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
+		--		},
+		--		init = function()
+		--			package.preload["nvim-web-devicons"] = function()
+		--				require("mini.icons").mock_nvim_web_devicons()
+		--				return package.loaded["nvim-web-devicons"]
+		--			end
+		--		end,
+		config = function()
+			require("mini.icons").setup()
+		end,
 	},
 }
