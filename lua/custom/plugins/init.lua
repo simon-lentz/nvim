@@ -8,18 +8,19 @@ return {
 		-- this is equivalent to setup({}) function
 	},
 	{
-		-- https://github.com/folke/tokyonight.nvim
-		"folke/tokyonight.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other start plugins
+		-- https://github.com/catppuccin/nvim
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme tokyonight]]) -- load the colorscheme
+			require("catppuccin").setup()
+			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
 		-- https://github.com/nvim-lualine/lualine.nvim
 		"nvim-lualine/lualine.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { require("custom.icons") },
 		config = function()
 			require("lualine").setup({})
 		end,
@@ -27,7 +28,7 @@ return {
 	{
 		-- https://github.com/nvim-tree/nvim-tree.lua
 		"nvim-tree/nvim-tree.lua",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
+		dependencies = { require("custom.icons") },
 		config = function()
 			require("nvim-tree").setup()
 		end,
