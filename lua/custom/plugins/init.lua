@@ -1,5 +1,11 @@
 return {
 	{
+		"goolord/alpha-nvim",
+		config = function()
+			require("custom.alpha")
+		end,
+	},
+	{
 		-- https://github.com/windwp/nvim-autopairs
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
@@ -39,6 +45,34 @@ return {
 			require("which-key").setup()
 		end,
 	},
+	{
+		-- https://github.com/nvim-telescope/telescope.nvim
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		dependencies = {
+			"nvim-lua/popup.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-ui-select.nvim",
+			{
+				"nvim-telescope/telescope-fzf-native.nvim",
+				build = "make",
+				cond = function()
+					return vim.fn.executable("make") == 1
+				end,
+			},
+		},
+		config = function()
+			require("custom.telescope")
+		end,
+	},
+	{
+		-- https://github.com/nvim-treesitter/nvim-treesitter
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			require("custom.treesitter")
+		end,
+	},
 	{ -- https://github.com/voldikss/vim-floaterm
 		"voldikss/vim-floaterm",
 	},
@@ -47,5 +81,11 @@ return {
 		config = function()
 			require("mini.icons").setup()
 		end,
+	},
+	{
+		"folke/trouble.nvim",
+		opts = {}, -- for default options, refer to the configuration section for custom setup.
+		cmd = "Trouble",
+		keys = {},
 	},
 }
