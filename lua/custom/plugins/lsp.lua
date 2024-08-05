@@ -4,8 +4,15 @@ return { -- LSP Configuration & Plugins
 		{ "williamboman/mason.nvim", config = true },
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		{ "j-hui/fidget.nvim", opts = {} },
-		{ "folke/neodev.nvim", opts = {} },
+		{ -- https://github.com/j-hui/fidget.nvim
+			"j-hui/fidget.nvim",
+			opts = {},
+		},
+		{
+			"folke/lazydev.nvim",
+			ft = "lua", -- only load on lua files
+			opts = {},
+		},
 	},
 	config = function()
 		require("custom.lsp")

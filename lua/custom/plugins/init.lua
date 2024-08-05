@@ -4,8 +4,6 @@ return {
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		config = true,
-		-- use opts = {} for passing setup options
-		-- this is equivalent to setup({}) function
 	},
 	{
 		-- https://github.com/catppuccin/nvim
@@ -46,17 +44,6 @@ return {
 	},
 	{ -- https://github.com/echasnovski/mini.icons
 		"echasnovski/mini.icons",
-		--		opts = {},
-		--		lazy = true,
-		--		specs = {
-		--			{ "nvim-tree/nvim-web-devicons", enabled = false, optional = true },
-		--		},
-		--		init = function()
-		--			package.preload["nvim-web-devicons"] = function()
-		--				require("mini.icons").mock_nvim_web_devicons()
-		--				return package.loaded["nvim-web-devicons"]
-		--			end
-		--		end,
 		config = function()
 			require("mini.icons").setup()
 		end,
