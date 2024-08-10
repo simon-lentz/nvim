@@ -21,6 +21,8 @@ return { -- Autoformat
 		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
+			python = { "black" },
+			go = { "gofumpt" },
 		},
 	},
 }

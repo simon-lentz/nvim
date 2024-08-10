@@ -68,7 +68,9 @@ vim.list_extend(ensure_installed, {
 	"lua_ls", -- Lua LSP
 	"mypy", -- Python linting
 	"pyright", -- Python LSP
-	"flake8", -- Python formatting
+	"black", -- Python formatting
+	"gopls", -- Go LSP
+	"gofumpt", -- Go formatting
 })
 
 require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

@@ -16,7 +16,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "🔭 Telescope", "<cmd>Telescope<cr>"),
 	dashboard.button("l", "📦 Lazy", "<cmd>Lazy<cr>"),
 	dashboard.button("m", "💬 Mason", "<cmd>Mason<cr>"),
-	dashboard.button("c", "🛠️ Config", "<cmd>new ~/dotfiles/.config/nvim<cr>"),
+	dashboard.button("c", "🛠️ Config", "<cmd>new ~/.config/nvim<cr>"),
 }
 
 dashboard.config.opts.noautocmd = true
